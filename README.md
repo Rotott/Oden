@@ -103,12 +103,29 @@ The architecture and individual components are expected to evolve significantly.
 
 ## Documentation
 
-- [Project Summary](docs/Project%20Summary.md) — overall project definition, vision, scope, and long-term direction
+- [Project summary](docs/Project%20Summary.md) — overall project definition, vision, scope, and long-term direction
 - [Requirements](docs/Requirements.md) — functional and non-functional requirements
 - [Architecture](docs/architecture.md) — system architecture and component relationships
+- [Technology](docs/technology.md) - selected, planned, and TBD technologies, including their purpose, status, and selection rationale
 
 
 
+## Development Roadmap
+
+ODEN is developed incrementally through GitHub milestones. Each milestone defines a specific development stage and is broken down into issues linked to the project's requirements.
+
+The current and planned milestones are:
+
+| Milestone | Focus |
+| :--- | :--- |
+| **M01** | Voice Journal |
+| **M02** | Personal Dataset |
+| **M03** | Personal STT |
+| **M04** | Memory **(TBD)**|
+| **M05** | Personal Assistant **(TBD)** |
+| **M06** | Agent System **(TBD)**|
+
+For the current implementation status, planned work, individual issues, and milestone progress, see the project's **GitHub Milestones and Issues**.
 
 
 ## Getting Started
@@ -138,117 +155,4 @@ Oden is designed around a local-first architecture.
 The public repository contains source code, documentation, tests, and non-sensitive examples. Personal recordings, transcripts, datasets, databases, model checkpoints, and private configuration are not part of the public repository.
 
 The long-term goal is for Oden to remain fully usable without requiring external AI APIs or paid cloud services.
-
-
-
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-------
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-------
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-
-
-
-
-
-
-## Technology
-
-Current/expected technologies:
-
-
-
-- **Backend:** Python 3.11+, FastAPI, pytest, SQLite / (SQLAlchemy)?, Jest
-- **Frontend:** React, TypeScript, (Tailwind CSS)?, (Vite)?
-- **AI & Audio Processing:** (PyTorch)?, (Local STT/LLM runtimes (e.g., Whisper, llama.cpp / Ollama))?
-- **Workflow Engine:** (FlowKit)? --> tbd 
-- **CI/CD:** GitHub Actions
-
-
-
-
-## Roadmap
-
-### Phase 1 — Voice Journal
-- Local audio recording
-- VAD
-- Local STT
-- Transcript storage
-- Manual correction
-- Basic search
-
-### Phase 2 — Personal Dataset
-- Structured dataset generation
-- Dataset validation
-- Audio preprocessing
-- Evaluation metrics
-- Dataset versioning
-
-### Phase 3 — Personal STT
-- Fine-tuning an existing open model
-- Personal vocabulary adaptation
-- Model evaluation
-- Model versioning
-
-### Phase 4 — Memory
-- Semantic search
-- Personal knowledge retrieval
-- Context management
-- Long-term memory
-
-### Phase 5 — Personal Assistant
-- Local LLM integration
-- Intent recognition
-- Tool calling
-- Tasks and reminders
-- Natural language interaction
-
-### Phase 6 — Agent System
-- Multiple agents/personas
-- Workflow orchestration
-- Planning
-- Tool execution
-- Voice-based interaction
-
 

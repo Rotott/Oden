@@ -1,5 +1,7 @@
 # Oden — Project Summary
 
+[← Back to README](../README.md)
+
 ## 1. Overview
 
 Oden is a local-first personal AI system intended to capture, understand, remember, and eventually act on information expressed through speech.
@@ -105,3 +107,8 @@ This is an exploration rather than a current implementation requirement.
 Oden should be a tool that listens, remembers, learns, and helps while keeping the user's data under the user's control.
 
 The system should prioritize useful infrastructure and measurable progress over premature autonomy.
+
+---
+
+
+[← Back to README](../README.md)
