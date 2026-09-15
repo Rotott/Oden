@@ -42,6 +42,7 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | ***Workflow Engine*** | FlowKit | **TBD** | Workflow orchestration |
 | **CI/CD** | GitHub Actions | Planned | Automated testing and CI |
 | **Version Control** | Git / GitHub | Planned | Source control and collaboration |
+| **Documentation / Diagrams** | Mermaid | Planned | Diagram rendering in Markdown documentation |
 
 ---
 
@@ -185,6 +186,13 @@ GitHub Actions will be used for automated development workflows, such as:
 - Building project components
 - Verifying pull requests
 - Other CI tasks as the project evolves
+
+---
+### Mermaid
+
+**Status:** Planned
+
+Mermaid is used to create diagrams within Markdown documentation, including architecture and workflow diagrams.
 
 ---
 

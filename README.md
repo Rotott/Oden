@@ -102,10 +102,9 @@ The architecture and individual components are expected to evolve significantly.
 
 
 ## Documentation
-
+- [Architecture](docs/architecture.md) — system architecture and component relationships
 - [Project summary](docs/Project%20Summary.md) — overall project definition, vision, scope, and long-term direction
 - [Requirements](docs/Requirements.md) — functional and non-functional requirements
-- [Architecture](docs/architecture.md) — system architecture and component relationships
 - [Technology](docs/technology.md) - selected, planned, and TBD technologies, including their purpose, status, and selection rationale
 
 
