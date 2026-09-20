@@ -1,6 +1,6 @@
 # ODEN Architecture
 
-[← Back to README](../README.md)
+[← Back to README](../../README.md)
 
 
 ## Table of Contents
@@ -177,6 +177,8 @@ The constraint documentation defines:
 
 These constraints apply to all components unless explicitly stated otherwise. New components and integrations shall follow the constraints defined in the corresponding documentation.
 
+Data and storage boundaries are documented separately in the
+[Data and Storage documentation](../data/data-and-storage.md).
 
 ---
 
@@ -336,6 +338,8 @@ Potential stored data includes:
 
 #### Notes
 The architecture should not require a specific database or storage technology at this stage. Storage does not interpret or contextualize data and is purely a persistence layer.
+
+
 
 ---
 
@@ -861,4 +865,4 @@ The architecture should evolve with the system rather than attempting to predict
 
 
 
-[← Back to README](../README.md)
+[← Back to README](../../README.md)
