@@ -2,6 +2,42 @@
 
 [← Back to README](../README.md)
 
+
+## Table of Contents
+
+- [1. Purpose](#1-purpose)
+- [2. Architectural principles](#2-architectural-principles)
+- [3. High-level component design](#3-high-level-component-design)
+  - [3.1 Component interfaces](#31-component-interfaces)
+  - [3.2 Architectural constraints](#32-architectural-constraints)
+- [4. Core components](#4-core-components)
+  - [4.1 Voice interface](#41-voice-interface)
+  - [4.2 Audio processing](#42-audio-processing)
+  - [4.3 Speech-to-Text](#43-speech-to-text)
+  - [4.4 Review / Correction](#44-review--correction)
+  - [4.5 Storage](#45-storage)
+  - [4.6 Search / Retrieval](#46-search--retrieval)
+  - [4.7 Memory system](#47-memory-system)
+  - [4.8 Agent runtime](#48-agent-runtime)
+  - [4.9 Model runtime](#49-model-runtime)
+  - [4.10 Tool system](#410-tool-system)
+  - [4.11 Workflow layer](#411-workflow-layer)
+  - [4.12 Application interface](#412-application-interface)
+  - [4.13 Dataset system](#413-dataset-system)
+  - [4.14 Model training](#414-model-training)
+- [5. System relationships](#5-system-relationships)
+- [6. Main data flows](#6-main-data-flows)
+  - [6.1 Voice journal flow](#61-voice-journal-flow)
+  - [6.2 Search and Memory flow](#62-search-and-memory-flow)
+  - [6.3 System/Agent execution flow](#63-systemagent-execution-flow)
+- [7. End-to-End data flow](#7-end-to-end-data-flow)
+- [8. External dependencies](#8-external-dependencies)
+- [9. Component dependency boundaries](#9-component-dependency-boundaries)
+- [10. Initial architecture scope](#10-initial-architecture-scope)
+- [11. Architectural evolution](#11-architectural-evolution)
+
+---
+
 ## 1. Purpose
 
 This document defines the initial high-level architecture of ODEN and establishes the major system components, their responsibilities, relationships, and primary data flows.
@@ -107,6 +143,40 @@ flowchart TD
 The diagram represents the intended architectural relationships rather than a fixed implementation.
 
 Not every operation will pass through every component. The workflow layer coordinates the components required for a particular operation.
+
+---
+
+## 3.1 Component interfaces
+
+ODEN components communicate through explicit public interfaces rather than depending directly on concrete implementations.
+
+The interface contracts are documented separately in the [Interface documentation](interfaces/interfaces.md).
+
+The interface documentation defines:
+
+* Public responsibilities and contracts
+* Inputs and outputs
+* Component dependencies
+* Implementation boundaries
+
+Individual implementations may change without requiring changes to components that depend only on the corresponding interface.
+
+---
+## 3.2 Architectural constraints
+
+ODEN's architecture is governed by a set of constraints that apply across components and implementations.
+
+The architectural constraints are documented separately in the [Constraint documentation](constraints/constraints.md).
+
+The constraint documentation defines:
+
+* Local-first and offline operation requirements
+* Personal data storage requirements
+* Rules for external and cloud services
+* Public repository boundaries
+
+These constraints apply to all components unless explicitly stated otherwise. New components and integrations shall follow the constraints defined in the corresponding documentation.
+
 
 ---
 
@@ -785,5 +855,10 @@ As implementation progresses, architectural decisions may be refined based on:
 Changes to major component boundaries or dependencies should be documented when they materially affect the architecture.
 
 The architecture should evolve with the system rather than attempting to predict all future requirements in advance.
+
+
+
+
+
 
 [← Back to README](../README.md)
