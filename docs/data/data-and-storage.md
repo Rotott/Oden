@@ -1,13 +1,15 @@
 # Data and storage
 
-[← Back to  ODEN Architecture](../architecture/architecture.md)
+[← Back to ODEN Architecture](../architecture/architecture.md)
 
+## Purpose
 
-This document defines how ODEN separates source code, public project
-resources, and private user data.
+This document defines the organization and default locations of ODEN's project resources, runtime data, models, and local configuration.
+
+The architectural requirements governing personal data storage, external transfers, ownership, portability, and deletion should be defined in the [Data storage constraints - documentation](../../architecture/constraints/data-storage.md).
+
 
 ## Storage categories
-
 | Category | Storage | Repository |
 |---|---|---|
 | Source code | Project repository | Included |
@@ -15,61 +17,95 @@ resources, and private user data.
 | Audio recordings | Local private storage | Excluded |
 | Transcripts | Local private storage | Excluded |
 | Datasets | Local private storage | Excluded |
-| Models/checkpoints | Local model storage | Excluded |
-| Private configuration | Local configuration storage | Excluded |
+| Models/checkpoints | Local private storage | Excluded |
+| Private configuration | Local private storage | Excluded |
 
-## Private data
 
-Private user data shall be stored outside the version-controlled
-repository.
+## Repository data
 
-### Audio
+The repository contains source code, documentation, public configuration templates, and intentionally versioned project resources.
 
-User-recorded audio is stored in:
+The `data/` directory is reserved for non-private project resources, such as curated examples and public reference data, see  [`data/` directory README](../../data/README.md).
 
-`<defined path>` **TBD**
+Test fixtures should generally be stored alongside the relevant test suite. Shared fixtures may be placed in a common test directory when needed. Test data containing private information shall not be committed to the repository.
 
-### Transcripts
+Private user data, machine-specific configuration, runtime outputs, and large model artifacts shall not be committed to the repository by default.
 
-User transcripts are stored in:
+## Runtime data location
 
-`<defined path>` **TBD**
+ODEN uses a configurable runtime data root, referred to as `ODEN_DATA_DIR`.
 
-### Datasets
+### Development default
 
-Private datasets are stored in:
+During development, the default location is a directory adjacent to the repository:
 
-`<defined path>` **TBD**
+```text
+Projects/
+├── Oden/
+└── Oden-data/
+```
 
-## Models and checkpoints
+The `Oden-data/` directory is local development storage and is not part of the ODEN repository.
 
-Model files and training checkpoints are treated as local resources
-rather than repository content. They shall be stored outside the source tree unless a specific model artifact is intentionally designated as a public project resource.
+### Future application default
+
+A platform-specific application data directory may replace the development default when ODEN's runtime and deployment requirements are established.
+
+For example, on Windows:
+
+```text
+%LOCALAPPDATA%\ODEN\data\
+```
+
+The configured `ODEN_DATA_DIR` takes precedence over the default location.
+
+
+## Runtime directory structure
+
+The initial runtime directory structure is:
+
+```text
+Oden-data/
+├── audio/
+├── transcripts/
+├── datasets/
+├── models/
+└── cache/
+```
+
+| Directory | Purpose |
+|---|---|
+| `audio/` | Audio recordings and related files |
+| `transcripts/` | Transcripts and corrections |
+| `datasets/` | Local datasets used for development, training, or evaluation |
+| `models/` | Downloaded models and training checkpoints |
+| `cache/` | Temporary or reproducible data |
+
+Subdirectories shall be introduced as required by implemented functionality. This structure does not prescribe file formats, database schemas, or storage backends.
 
 ## Configuration
 
-Private configuration, including credentials, local paths, and other
-machine- or user-specific settings, shall not be committed to the
-repository. Public configuration templates may be included in the repository.
+Machine-specific settings, private configuration, credentials, and local paths shall remain outside the repository.
+
+Public configuration templates and non-sensitive examples may be included in the repository.
+
 
 ## Repository exclusions
 
-Private data and machine-local resources shall be excluded using the
-repository's ignore rules.
+Repository ignore rules shall cover private and machine-local resources, including:
 
-Examples include:
-
-- Audio recordings
-- Private transcripts
-- Private datasets
-- Model/checkpoint files
-- Local configuration
-- Runtime-generated data
-
-## Data ownership
-
-User-generated audio, transcripts, datasets, and other private data
-remain user-owned data. ODEN's source repository contains the software and intentionally public project resources, not users' private data.
+- Audio recordings and private transcripts.
+- Private datasets and runtime-generated files.
+- Downloaded models and training checkpoints.
+- Local configuration and credentials.
+- Cache files and temporary processing outputs.
 
 
-[← Back to  ODEN Architecture](../architecture/architecture.md)
+
+## Future storage changes
+
+The current directory structure is an initial organizational convention, not a commitment to a particular storage implementation.
+
+Future changes, including relocation to a platform-specific data directory or introduction of a database, should preserve the separation between project resources and runtime data.
+
+[← Back to ODEN Architecture](../architecture/architecture.md)
