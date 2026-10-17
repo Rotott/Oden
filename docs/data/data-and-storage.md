@@ -72,4 +72,4 @@ User-generated audio, transcripts, datasets, and other private data
 remain user-owned data. ODEN's source repository contains the software and intentionally public project resources, not users' private data.
 
 
-[← Back to  ODEN Architecture](architecture.md)
+[← Back to  ODEN Architecture](../architecture/architecture.md)
