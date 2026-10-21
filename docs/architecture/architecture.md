@@ -174,6 +174,11 @@ The constraint documentation defines:
 * Personal data storage requirements
 * Rules for external and cloud services
 * Public repository boundaries
+* Processing metadata and traceability requirements
+
+Additional architectural constraints are documented separately:
+
+- [Processing metadata and traceability](observability/processing-metadata.md) defines artifact identifiers, processing metadata, version tracking, and relationships between source and derived data.
 
 These constraints apply to all components unless explicitly stated otherwise. New components and integrations shall follow the constraints defined in the corresponding documentation.
 
@@ -247,7 +252,7 @@ Audio processing prepares raw audio for speech recognition.
 #### Notes
 Audio Processing does not interpret speech.
 It only prepares audio for STT.\
-Voice Activity Detection (VAD) is considered part of the audio-processing pipeline.
+Voice activity detection (VAD) is considered part of the audio-processing pipeline.
 
 ---
 
@@ -542,7 +547,7 @@ Storage
 
 ```
 #### Note
-**The Workflow Layer prevents individual components from becoming tightly coupled to every other component.**Components remain independent and unaware of each other. Workflow ensures correct sequencing.
+**The Workflow Layer prevents individual components from becoming tightly coupled to every other component.** Components remain independent and unaware of each other. Workflow ensures correct sequencing.
 
 ---
 
