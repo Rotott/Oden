@@ -4,6 +4,8 @@
 
 This document describes the technologies used or planned for ODEN, along with their current status and intended purpose.
 
+Supported operating systems, runtime versions, hardware requirements, and development environment requirements are defined in the [Supported Environments](development/supported-environments.md) document.
+
 Technology choices may change as the project develops. Major changes should be reflected in this document.
 
 ---
@@ -33,6 +35,7 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | ***ORM*** | SQLAlchemy | **TBD** | Database abstraction and data access |
 | **Frontend** | React | Planned | User interface |
 | **Frontend Language** | TypeScript | Planned | Type-safe frontend development |
+| **Frontend Runtime / Tooling** |	Node.js |	Planned	| Runs frontend development and build tools |
 | **Frontend Testing** | Jest | Planned | Automated frontend/unit testing |
 | ***Build Tooling*** | Vite | **TBD** | Frontend development and build tooling |
 | ***Styling*** | Tailwind CSS | **TBD** | Frontend styling |
@@ -42,7 +45,7 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | ***Workflow Engine*** | FlowKit | **TBD** | Workflow orchestration |
 | **CI/CD** | GitHub Actions | Planned | Automated testing and CI |
 | **Version Control** | Git / GitHub | Planned | Source control and collaboration |
-| **Documentation / Diagrams** | Mermaid | Planned | Diagram rendering in Markdown documentation |
+| **Documentation / Diagrams** | Mermaid | Used | Diagram rendering in Markdown documentation |
 
 ---
 
