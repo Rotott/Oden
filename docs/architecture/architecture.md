@@ -148,9 +148,7 @@ Not every operation will pass through every component. The workflow layer coordi
 
 ## 3.1 Component interfaces
 
-ODEN components communicate through explicit public interfaces rather than depending directly on concrete implementations.
-
-The interface contracts are documented separately in the [Interface documentation](interfaces/interfaces.md).
+ODEN components communicate through explicit public interfaces rather than depending directly on concrete implementations. The interface contracts are documented separately in the [Interface documentation](interfaces/interfaces.md).
 
 The interface documentation defines:
 
@@ -160,6 +158,11 @@ The interface documentation defines:
 * Implementation boundaries
 
 Individual implementations may change without requiring changes to components that depend only on the corresponding interface.
+
+### 3.1.1 API design
+
+Programmatic APIs must use explicit contracts and must not expose internal implementation details. REST over HTTP with JSON is the default for HTTP-based APIs. API design principles are defined in the [API Design](api-design.md) document. Internal component interfaces and external API contracts are documented separately. Concrete HTTP endpoints and their schemas should be specified when  they are introduced.
+
 
 ---
 ## 3.2 Architectural constraints
