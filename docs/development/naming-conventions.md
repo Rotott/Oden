@@ -1,5 +1,18 @@
 # Naming conventions for ODEN
 
+## Table of Contents
+
+- [1. Purpose](#1-purpose)
+- [2. General Principles](#2-general-principles)
+- [3. Python](#3-python)
+- [4. TypeScript / React](#4-typescript--react)
+- [5. Database and Data](#5-database-and-data)
+- [6. API](#6-api)
+- [7. Tests](#7-tests)
+- [8. Files and Directories](#8-files-and-directories)
+- [9. Documentation](#9-documentation)
+- [10. Abbreviations](#10-abbreviations)
+- [11. Naming Priority](#11-naming-priority)
 
 ## 1. Purpose
 

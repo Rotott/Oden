@@ -9,6 +9,7 @@
 - [2. Architectural principles](#2-architectural-principles)
 - [3. High-level component design](#3-high-level-component-design)
   - [3.1 Component interfaces](#31-component-interfaces)
+    - [3.1.1 API design](#311-api-design)
   - [3.2 Architectural constraints](#32-architectural-constraints)
 - [4. Core components](#4-core-components)
   - [4.1 Voice interface](#41-voice-interface)

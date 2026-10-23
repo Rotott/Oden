@@ -2,6 +2,37 @@
 
 [← Back to README](../README.md)
 
+## Table of Contents
+
+- [Document purpose](#document-purpose)
+- [Technology Status](#technology-status)
+- [Technology Stack](#technology-stack)
+- [Backend](#backend)
+  - [Python](#python)
+  - [FastAPI](#fastapi)
+  - [pytest](#pytest)
+- [Database](#database)
+  - [SQLite](#sqlite)
+  - [SQLAlchemy](#sqlalchemy)
+- [Frontend](#frontend)
+  - [React](#react)
+  - [TypeScript](#typescript)
+  - [Jest](#jest)
+  - [Vite](#vite)
+  - [Tailwind CSS](#tailwind-css)
+- [AI & Audio Processing](#ai--audio-processing)
+  - [PyTorch](#pytorch)
+  - [Local Speech-to-Text](#local-speech-to-text)
+  - [Local LLM Runtime](#local-llm-runtime)
+- [Workflow Engine](#workflow-engine)
+  - [FlowKit](#flowkit)
+- [CI/CD](#cicd)
+  - [GitHub Actions](#github-actions)
+  - [Mermaid](#mermaid)
+- [Technology Selection Principles](#technology-selection-principles)
+
+---
+## Document purpose
 This document describes the technologies used or planned for ODEN, along with their current status and intended purpose.
 
 Supported operating systems, runtime versions, hardware requirements, and development environment requirements are defined in the [Supported Environments](development/supported-environments.md) document.
