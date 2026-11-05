@@ -129,21 +129,46 @@ For the current implementation status, planned work, individual issues, and mile
 
 ## Getting Started
 
-> **Note:** Setup instructions are preliminary and subject to change.
+> _**Note:** Setup instructions are preliminary and subject to change._
+
+### Prerequisites
+
+- Git
+- Python (see `backend/pyproject.toml` for the required version)
+- [uv](https://docs.astral.sh/uv/)
+- Node.js and npm
+
+### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/Rotott/oden.git
+cd oden
 
-# Install dependencies
-pip install -r requirements.txt
+# Install backend dependencies
+cd backend
+uv sync --locked
 
 # Install frontend dependencies
-npm install --prefix frontend
-
-# Run backend
-python -m backend.main
+cd ../frontend
+npm ci
 ```
+
+### Development
+
+Backend and frontend are managed independently.
+
+```bash
+# Backend
+cd backend
+uv run python --version
+
+# Frontend
+cd frontend
+npx tsc --version
+```
+
+Application startup commands will be added as the backend and frontend entry points are implemented.
 
 
 
