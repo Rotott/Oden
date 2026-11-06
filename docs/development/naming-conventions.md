@@ -54,7 +54,7 @@ Code formatting should be consistent and preferably enforced through automated f
 
 ### Python //TODO move this down to ##4?
 
-Python code should follow PEP 8, with the following project preferences:
+Python code should generally follow PEP 8, with the following project preferences:
 
 | Element | Convention |
 |---|---|

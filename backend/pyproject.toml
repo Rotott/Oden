@@ -4,10 +4,26 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.162.0",
+    "ruff>=0.17.4",
 ]
 
 [dependency-groups]
 dev = [
     "pytest",
     "ruff",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # Pyflakes
+    "I",  # Import sorting
+    "UP", # pyupgrade
 ]

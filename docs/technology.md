@@ -9,6 +9,7 @@
 - [Technology Stack](#technology-stack)
 - [Backend](#backend)
   - [Python](#python)
+  - [Ruff](#ruff)
   - [FastAPI](#fastapi)
   - [pytest](#pytest)
 - [Database](#database)
@@ -17,6 +18,8 @@
 - [Frontend](#frontend)
   - [React](#react)
   - [TypeScript](#typescript)
+  - [ESLint](#eslint)
+  - [Prettier](#prettier)
   - [Jest](#jest)
   - [Vite](#vite)
   - [Tailwind CSS](#tailwind-css)
@@ -32,7 +35,9 @@
 - [Technology Selection Principles](#technology-selection-principles)
 
 ---
+
 ## Document purpose
+
 This document describes the technologies used or planned for ODEN, along with their current status and intended purpose.
 
 Supported operating systems, runtime versions, hardware requirements, and development environment requirements are defined in the [Supported Environments](development/supported-environments.md) document.
@@ -40,6 +45,7 @@ Supported operating systems, runtime versions, hardware requirements, and develo
 Technology choices may change as the project develops. Major changes should be reflected in this document.
 
 ---
+
 ## Technology Status
 
 The following status labels are used in this document:
@@ -61,22 +67,25 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | :--- | :--- | :--- | :--- |
 | **Backend** | Python 3.11+ | Planned | Core application and backend logic |
 | **Backend API** | FastAPI | Planned | HTTP API and backend services |
-| **Testing** | pytest | Planned | Backend testing |
+| **Backend Testing** | pytest | Planned | Backend testing |
+| **Backend Code Quality** | Ruff | Implemented | Python linting and code formatting |
 | **Database** | SQLite | Planned | Local application data storage |
-| ***ORM*** | SQLAlchemy | **TBD** | Database abstraction and data access |
+| **ORM** | SQLAlchemy | **TBD** | Database abstraction and data access |
 | **Frontend** | React | Planned | User interface |
 | **Frontend Language** | TypeScript | Planned | Type-safe frontend development |
-| **Frontend Runtime / Tooling** |	Node.js |	Planned	| Runs frontend development and build tools |
-| **Frontend Testing** | Jest | Planned | Automated frontend/unit testing |
-| ***Build Tooling*** | Vite | **TBD** | Frontend development and build tooling |
-| ***Styling*** | Tailwind CSS | **TBD** | Frontend styling |
-| ***AI / ML*** | PyTorch | **TBD** | Local AI/ML development and model training |
+| **Frontend Runtime / Tooling** | Node.js | Planned | Runs frontend development and build tools |
+| **Frontend Linting** | ESLint | Implemented | Static analysis and code quality checks |
+| **Frontend Formatting** | Prettier | Implemented | Consistent frontend code formatting |
+| **Frontend Testing** | Jest **OR** vitest | **TBD** | Automated frontend/unit testing |
+| **Build Tooling** | Vite | **TBD** | Frontend development and build tooling |
+| **Styling** | Tailwind CSS | **TBD** | Frontend styling |
+| **AI / ML** | PyTorch | **TBD** | Local AI/ML development and model training |
 | **Speech-to-Text** | Local STT | Planned | Local speech recognition |
-| ***LLM Runtime*** | Local LLM runtime | **TBD** | Local language-model inference |
-| ***Workflow Engine*** | FlowKit | **TBD** | Workflow orchestration |
+| **LLM Runtime** | Local LLM runtime | **TBD** | Local language-model inference |
+| **Workflow Engine** | FlowKit | **TBD** | Workflow orchestration |
 | **CI/CD** | GitHub Actions | Planned | Automated testing and CI |
 | **Version Control** | Git / GitHub | Planned | Source control and collaboration |
-| **Documentation / Diagrams** | Mermaid | Used | Diagram rendering in Markdown documentation |
+| **Documentation / Diagrams** | Mermaid | Implemented | Diagram rendering in Markdown documentation |
 
 ---
 
@@ -89,6 +98,14 @@ Technology decisions should be updated as ODEN progresses through its milestones
 Python is the primary backend language for ODEN. It will be used for application logic, data processing, AI/ML components, and supporting services.
 
 **Target version:** Python 3.11+
+
+### Ruff
+
+**Status:** Implemented
+
+Ruff is used for Python linting and code formatting. 
+
+**Current version:** 0.17.4
 
 ### FastAPI
 
@@ -137,6 +154,22 @@ React will be used to build ODEN's graphical user interface.
 **Status:** Planned
 
 TypeScript will be used as the primary frontend programming language to provide static typing and improve maintainability.
+
+### ESLint
+
+**Status:** Implemented
+
+ESLint is used for static analysis and code quality checks in the TypeScript/React frontend.
+ 
+ **Current version:** 9.39.5
+
+### Prettier
+
+**Status:** Implemented
+
+Prettier is used for automatic code formatting in the frontend. It provides consistent formatting across TypeScript, JavaScript, and related frontend files. 
+
+**Current version:** 3.9.10
 
 ### Jest
 
@@ -222,9 +255,10 @@ GitHub Actions will be used for automated development workflows, such as:
 - Other CI tasks as the project evolves
 
 ---
+
 ### Mermaid
 
-**Status:** Planned
+**Status:** Implemented
 
 Mermaid is used to create diagrams within Markdown documentation, including architecture and workflow diagrams.
 
@@ -243,6 +277,5 @@ Technology choices for ODEN should generally follow these principles:
 7. **Resource efficiency** — Consider CPU, RAM, storage, and GPU requirements when selecting AI and audio technologies.
 
 ---
-
 
 [← Back to README](../README.md)
