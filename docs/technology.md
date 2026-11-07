@@ -10,6 +10,7 @@
 - [Backend](#backend)
   - [Python](#python)
   - [Ruff](#ruff)
+  - [Pyright](#pyright)
   - [FastAPI](#fastapi)
   - [pytest](#pytest)
 - [Database](#database)
@@ -68,7 +69,8 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | **Backend** | Python 3.11+ | Planned | Core application and backend logic |
 | **Backend API** | FastAPI | Planned | HTTP API and backend services |
 | **Backend Testing** | pytest | Planned | Backend testing |
-| **Backend Code Quality** | Ruff | Implemented | Python linting and code formatting |
+| **Backend Linting / Formatting** | Ruff | Implemented | Python linting and code formatting |
+| **Backend Type Checking** | Pyright | Implemented | Python static type checking |
 | **Database** | SQLite | Planned | Local application data storage |
 | **ORM** | SQLAlchemy | **TBD** | Database abstraction and data access |
 | **Frontend** | React | Planned | User interface |
@@ -76,7 +78,7 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | **Frontend Runtime / Tooling** | Node.js | Planned | Runs frontend development and build tools |
 | **Frontend Linting** | ESLint | Implemented | Static analysis and code quality checks |
 | **Frontend Formatting** | Prettier | Implemented | Consistent frontend code formatting |
-| **Frontend Testing** | Jest **OR** vitest | **TBD** | Automated frontend/unit testing |
+| **Frontend Testing** | Jest **OR** Vitest | **TBD** | Automated frontend/unit testing |
 | **Build Tooling** | Vite | **TBD** | Frontend development and build tooling |
 | **Styling** | Tailwind CSS | **TBD** | Frontend styling |
 | **AI / ML** | PyTorch | **TBD** | Local AI/ML development and model training |
@@ -103,9 +105,15 @@ Python is the primary backend language for ODEN. It will be used for application
 
 **Status:** Implemented
 
-Ruff is used for Python linting and code formatting. 
+Ruff is used for Python linting and code formatting. It provides static code analysis and enforces consistent formatting across the backend.
 
 **Current version:** 0.17.4
+
+### Pyright
+
+**Status:** Implemented
+
+Pyright is used for static type checking of ODEN's Python code. It identifies type inconsistencies and helps maintain reliable interfaces between backend components.
 
 ### FastAPI
 
@@ -160,14 +168,14 @@ TypeScript will be used as the primary frontend programming language to provide 
 **Status:** Implemented
 
 ESLint is used for static analysis and code quality checks in the TypeScript/React frontend.
- 
- **Current version:** 9.39.5
+
+**Current version:** 9.39.5
 
 ### Prettier
 
 **Status:** Implemented
 
-Prettier is used for automatic code formatting in the frontend. It provides consistent formatting across TypeScript, JavaScript, and related frontend files. 
+Prettier is used for automatic code formatting in the frontend. It provides consistent formatting across TypeScript, JavaScript, and related frontend files.
 
 **Current version:** 3.9.10
 
@@ -250,6 +258,7 @@ GitHub Actions will be used for automated development workflows, such as:
 
 - Running automated tests
 - Checking code quality
+- Running static type checks
 - Building project components
 - Verifying pull requests
 - Other CI tasks as the project evolves
