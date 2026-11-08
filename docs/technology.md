@@ -22,7 +22,7 @@
   - [TypeScript](#typescript)
   - [ESLint](#eslint)
   - [Prettier](#prettier)
-  - [Jest](#jest)
+  - [Vitest](#vitest)
   - [Vite](#vite)
   - [Tailwind CSS](#tailwind-css)
 - [Desktop Wrapper](#desktop-wrapper)
@@ -73,22 +73,22 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | :--- | :--- | :--- | :--- |
 | **Backend** | Python 3.11+ | Planned | Core application and backend logic |
 | **Backend API** | FastAPI | Planned | HTTP API and backend services |
-| **Backend Testing** | pytest | Planned | Backend testing |
+| **Backend Testing** | pytest | Implemented | Automated backend testing |
 | **Backend Linting / Formatting** | Ruff | Implemented | Python linting and code formatting |
 | **Backend Type Checking** | Pyright | Implemented | Python static type checking |
 | **Database** | SQLite | Planned | Local application data storage |
 | **ORM** | SQLAlchemy | **TBD** | Database abstraction and data access |
 | **Frontend** | React | Planned | User interface |
 | **Frontend Language** | TypeScript | Planned | Type-safe frontend development |
-**Frontend Mobile** | React Native (Expo) | **TBD** | Cross-platform mobile GUI (iOS/Android) sharing logic with web 
+| **Frontend Mobile** | React Native (Expo) | **TBD** | Cross-platform mobile GUI (iOS/Android) sharing logic with web |
 | **Frontend Runtime / Tooling** | Node.js | Planned | Runs frontend development and build tools |
 | **Frontend Linting** | ESLint | Implemented | Static analysis and code quality checks |
 | **Frontend Formatting** | Prettier | Implemented | Consistent frontend code formatting |
-| **Frontend Testing** | Jest **OR** Vitest | **TBD** | Automated frontend/unit testing |
+| **Frontend Testing** | Vitest | Planned | Automated frontend and unit testing |
 | **Build Tooling** | Vite | **TBD** | Frontend development and build tooling |
 | **Styling** | Tailwind CSS | **TBD** | Frontend styling |
-**Desktop Wrapper / Build Tooling** | Tauri | **TBD** | Desktop application packaging and system integration (global shortcuts, tray)
-**E2E-Testing** | Playwright | **TBD** | End-to-end integration testing for web and API flows
+| **Desktop Wrapper / Build Tooling** | Tauri | **TBD** | Desktop application packaging and system integration (global shortcuts, tray) |
+| **E2E Testing** | Playwright | **TBD** | End-to-end testing for user workflows and application integration |
 | **AI / ML** | PyTorch | **TBD** | Local AI/ML development and model training |
 | **Speech-to-Text** | Local STT | Planned | Local speech recognition |
 | **LLM Runtime** | Local LLM runtime | **TBD** | Local language-model inference |
@@ -131,9 +131,9 @@ FastAPI will provide the HTTP API between the backend and frontend and expose ba
 
 ### pytest
 
-**Status:** Planned
+**Status:** Implemented
 
-pytest will be used for automated backend testing.
+pytest is used for automated backend testing.
 
 ---
 
@@ -193,13 +193,13 @@ Prettier is used for automatic code formatting in the frontend. It provides cons
 
 **Current version:** 3.9.10
 
-### Jest
+### Vitest
 
 **Status:** Planned
 
-Jest will be used for automated testing of the frontend, including unit tests and component-related tests where appropriate.
+Vitest is intended to be used for automated frontend testing, including unit tests and component-related tests where appropriate.
 
-Jest will be configured to work with the TypeScript-based frontend.
+The final configuration will depend on the selected frontend build tooling.
 
 ### Vite
 
@@ -214,6 +214,7 @@ Vite is a candidate for frontend development and build tooling.
 Tailwind CSS is a candidate for frontend styling.
 
 ---
+
 ## Desktop Wrapper
 
 ### Tauri
@@ -270,13 +271,14 @@ FlowKit is being considered as the workflow engine for ODEN.
 The decision will depend on whether FlowKit provides the required workflow orchestration, execution, and integration capabilities without introducing unnecessary complexity or coupling.
 
 ---
+
 ## Testing & Quality Assurance
 
 ### Playwright
 
 **Status:** TBD
 
-Playwright is a candidate for End-to-End (E2E) automated testing. It will be used to test complete user workflows (e.g., audio capture triggering backend processing and displaying transcripts in the GUI) across UIs.
+Playwright is a candidate for end-to-end (E2E) automated testing. It will be used to test complete user workflows (e.g., audio capture triggering backend processing and displaying transcripts in the GUI) across UIs.
 
 ---
 
