@@ -156,16 +156,53 @@ npm ci
 
 ### Development
 
-Backend and frontend are managed independently.
+Backend and frontend development environments are managed independently.
 
+#### Beckend
+Navigate to and run commands from the **backend/** directory.
 ```bash
-# Backend
-cd backend
+# Check Python version
 uv run python --version
+# Run automated tests
+uv run pytest
+```
 
-# Frontend
-cd frontend
+
+#### Frontend
+Navigate to and run commands from the **frontend/** directory.
+```bash
+#Check TypeScript version
 npx tsc --version
+
+# Start the development server
+npm run dev
+
+# Run frontend tests once
+npm test
+
+# Run frontend tests in watch mode
+npm run test:watch
+
+# Run TypeScript type checking
+npm run typecheck
+
+# Run ESLint
+npm run lint
+
+# Automatically fix ESLint issues where possible
+npm run lint:fix
+
+# Check code formatting
+npm run format:check
+
+# Format code
+npm run format
+
+# Build the production frontend
+npm run build
+
+# Preview the production build locally
+npm run preview
 ```
 
 Application startup commands will be added as the backend and frontend entry points are implemented.

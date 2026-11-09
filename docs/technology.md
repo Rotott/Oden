@@ -23,6 +23,8 @@
   - [ESLint](#eslint)
   - [Prettier](#prettier)
   - [Vitest](#vitest)
+  - [React Testing Library](#react-testing-library)
+  - [jsdom](#jsdom)
   - [Vite](#vite)
   - [Tailwind CSS](#tailwind-css)
 - [Desktop Wrapper](#desktop-wrapper)
@@ -78,14 +80,15 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | **Backend Type Checking** | Pyright | Implemented | Python static type checking |
 | **Database** | SQLite | Planned | Local application data storage |
 | **ORM** | SQLAlchemy | **TBD** | Database abstraction and data access |
-| **Frontend** | React | Planned | User interface |
-| **Frontend Language** | TypeScript | Planned | Type-safe frontend development |
+| **Frontend** | React | Implemented | User interface |
+| **Frontend Language** | TypeScript | Implemented | Type-safe frontend development |
 | **Frontend Mobile** | React Native (Expo) | **TBD** | Cross-platform mobile GUI (iOS/Android) sharing logic with web |
-| **Frontend Runtime / Tooling** | Node.js | Planned | Runs frontend development and build tools |
+| **Frontend Runtime / Tooling** | Node.js | Implemented | Runs frontend development and build tools |
 | **Frontend Linting** | ESLint | Implemented | Static analysis and code quality checks |
 | **Frontend Formatting** | Prettier | Implemented | Consistent frontend code formatting |
-| **Frontend Testing** | Vitest | Planned | Automated frontend and unit testing |
-| **Build Tooling** | Vite | Planned | Frontend development and build tooling |
+| **Build Tooling** | Vite | Implemented | Frontend development and build tooling |
+| **Frontend Testing** | Vitest | Implemented | Automated frontend and unit testing |
+| **Frontend Test Environment** | jsdom | Implemented | Browser-like DOM environment for frontend tests |
 | **Styling** | Tailwind CSS | **TBD** | Frontend styling |
 | **Desktop Wrapper / Build Tooling** | Tauri | **TBD** | Desktop application packaging and system integration (global shortcuts, tray) |
 | **E2E Testing** | Playwright | **TBD** | End-to-end testing for user workflows and application integration |
@@ -161,9 +164,9 @@ The decision will depend on the complexity of ODEN's data model and whether an O
 
 ### React
 
-**Status:** Planned
+**Status:** Implemented
 
-React will be used to build ODEN's graphical user interface.
+React is used to build ODEN's graphical user interface.
 
 ### React Native (Expo)
 
@@ -173,9 +176,10 @@ React Native (via Expo) is a candidate for building the mobile user interface. I
 
 ### TypeScript
 
-**Status:** Planned
+**Status:** Implemented
 
-TypeScript will be used as the primary frontend programming language to provide static typing and improve maintainability.
+TypeScript is used as the primary frontend programming language to provide static typing and improve maintainability.
+
 
 ### ESLint
 
@@ -183,7 +187,6 @@ TypeScript will be used as the primary frontend programming language to provide 
 
 ESLint is used for static analysis and code quality checks in the TypeScript/React frontend.
 
-**Current version:** 9.39.5
 
 ### Prettier
 
@@ -191,21 +194,31 @@ ESLint is used for static analysis and code quality checks in the TypeScript/Rea
 
 Prettier is used for automatic code formatting in the frontend. It provides consistent formatting across TypeScript, JavaScript, and related frontend files.
 
-**Current version:** 3.9.10
 
 ### Vitest
 
-**Status:** Planned
+**Status:** Implemented
 
-Vitest is intended to be used for automated frontend testing, including unit tests and component-related tests where appropriate.
+Vitest is used as the frontend test runner for automated unit and component testing. Vitest is configured to use jsdom as its test environment and to load the shared test setup from `tests/setup.ts`.
 
-The final configuration will depend on the selected frontend build tooling.
+### React Testing Library
+
+**Status:** Implemented
+
+React Testing Library is used to render React components and test their behavior through the DOM.
+
+### jsdom
+
+**Status:** Implemented
+
+jsdom provides a browser-like DOM environment for frontend tests, allowing React components to be tested without launching a real browser.
+
 
 ### Vite
 
-**Status:** TBD
+**Status:** Implemented
 
-Vite is a candidate for frontend development and build tooling.
+Vite is used for frontend development and production builds. It provides the development server, React integration, and build tooling.
 
 ### Tailwind CSS
 
