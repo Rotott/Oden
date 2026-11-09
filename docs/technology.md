@@ -85,7 +85,7 @@ Technology decisions should be updated as ODEN progresses through its milestones
 | **Frontend Linting** | ESLint | Implemented | Static analysis and code quality checks |
 | **Frontend Formatting** | Prettier | Implemented | Consistent frontend code formatting |
 | **Frontend Testing** | Vitest | Planned | Automated frontend and unit testing |
-| **Build Tooling** | Vite | **TBD** | Frontend development and build tooling |
+| **Build Tooling** | Vite | Planned | Frontend development and build tooling |
 | **Styling** | Tailwind CSS | **TBD** | Frontend styling |
 | **Desktop Wrapper / Build Tooling** | Tauri | **TBD** | Desktop application packaging and system integration (global shortcuts, tray) |
 | **E2E Testing** | Playwright | **TBD** | End-to-end testing for user workflows and application integration |
