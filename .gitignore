@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Build artifacts
+dist/
+build/
+
+# Tree from "tree /F > tree.txt"
+tree.txt
