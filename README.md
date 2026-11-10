@@ -129,21 +129,83 @@ For the current implementation status, planned work, individual issues, and mile
 
 ## Getting Started
 
-> **Note:** Setup instructions are preliminary and subject to change.
+> _**Note:** Setup instructions are preliminary and subject to change._
+
+### Prerequisites
+
+- Git
+- Python (see `backend/pyproject.toml` for the required version)
+- [uv](https://docs.astral.sh/uv/)
+- Node.js and npm
+
+### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/Rotott/oden.git
+cd oden
 
-# Install dependencies
-pip install -r requirements.txt
+# Install backend dependencies
+cd backend
+uv sync --locked
 
 # Install frontend dependencies
-npm install --prefix frontend
-
-# Run backend
-python -m backend.main
+cd ../frontend
+npm ci
 ```
+
+### Development
+
+Backend and frontend development environments are managed independently.
+
+#### Beckend
+Navigate to and run commands from the **backend/** directory.
+```bash
+# Check Python version
+uv run python --version
+# Run automated tests
+uv run pytest
+```
+
+
+#### Frontend
+Navigate to and run commands from the **frontend/** directory.
+```bash
+#Check TypeScript version
+npx tsc --version
+
+# Start the development server
+npm run dev
+
+# Run frontend tests once
+npm test
+
+# Run frontend tests in watch mode
+npm run test:watch
+
+# Run TypeScript type checking
+npm run typecheck
+
+# Run ESLint
+npm run lint
+
+# Automatically fix ESLint issues where possible
+npm run lint:fix
+
+# Check code formatting
+npm run format:check
+
+# Format code
+npm run format
+
+# Build the production frontend
+npm run build
+
+# Preview the production build locally
+npm run preview
+```
+
+Application startup commands will be added as the backend and frontend entry points are implemented.
 
 
 
