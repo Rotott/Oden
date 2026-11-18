@@ -7,7 +7,7 @@ describe('App', () => {
   it('renders the ODEN heading', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: 'ODEN' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Hello from ODEN' })).toBeInTheDocument();
   });
 
 

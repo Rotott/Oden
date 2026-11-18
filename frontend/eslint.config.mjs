@@ -1,3 +1,4 @@
+
 import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
@@ -25,6 +26,9 @@ export default defineConfig([
       react: {
         version: 'detect',
       },
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
     },
   },
   eslintConfigPrettier,
