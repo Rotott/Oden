@@ -9,6 +9,4 @@ describe('App', () => {
 
     expect(screen.getByRole('heading', { name: 'Hello from ODEN' })).toBeInTheDocument();
   });
-
-
 });
