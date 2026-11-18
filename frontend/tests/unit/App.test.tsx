@@ -7,13 +7,6 @@ describe('App', () => {
   it('renders the ODEN heading', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: 'ODEN' })).toBeInTheDocument();
-  });
-
-  // Test setup placeholder.  FAIL
-  it('Fail case', () => {
-    render(<App />);
-    const temp = 3;
-    expect(1 + 1).toBe(temp);
+    expect(screen.getByRole('heading', { name: 'Hello from ODEN' })).toBeInTheDocument();
   });
 });
