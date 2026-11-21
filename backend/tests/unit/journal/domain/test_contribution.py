@@ -5,7 +5,6 @@ from src.journal.domain.contribution import VoiceContribution
 from src.journal.domain.recording import Recording
 from src.journal.domain.transcription import Transcription
 
-
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 # Initialization and default values
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

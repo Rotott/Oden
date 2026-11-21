@@ -1,8 +1,8 @@
-from uuid import UUID, uuid4
-
-from src.journal.domain.journal import Journal
-from src.journal.domain.folder import Folder
 from unittest.mock import Mock
+from uuid import UUID
+
+from src.journal.domain.folder import Folder
+from src.journal.domain.journal import Journal
 
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 # Initialization and default values
@@ -79,7 +79,7 @@ def test_add_folder_increases_folder_count(
     journal,
     sample_folder,
 ):
-    pre = journal.folders.size()
+    pre = len(journal.folders)
     journal.add_folder(sample_folder)
 
     assert len(journal.folders) == pre + 1
@@ -89,7 +89,7 @@ def test_add_multiple_folders(journal):
 
     first_folder = Mock(spec=Folder)
     second_folder = Mock(spec=Folder)
-    pre = journal.folders.size()
+    pre = len(journal.folders)
 
     journal.add_folder(first_folder)
     journal.add_folder(second_folder)
@@ -118,20 +118,21 @@ def test_add_entry_increases_entry_count(
     sample_journal_entry,
 ):
 
-    pre = journal.entries.size()
+    pre = len(journal.entries)
     journal.add_entry(sample_journal_entry)
 
     assert len(journal.entries) == pre + 1
 
 
 def test_add_multiple_entries(journal):
-    from src.journal.domain.journal_entry import JournalEntry
     from unittest.mock import Mock
+
+    from src.journal.domain.journal_entry import JournalEntry
 
     first_entry = Mock(spec=JournalEntry)
     second_entry = Mock(spec=JournalEntry)
 
-    pre = journal.entries.size()
+    pre = len(journal.entries)
     journal.add_entry(first_entry)
     journal.add_entry(second_entry)
 

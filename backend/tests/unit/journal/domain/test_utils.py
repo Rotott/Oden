@@ -2,7 +2,6 @@ from datetime import UTC, datetime
 
 from src.journal.domain.utils import utc_now
 
-
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 # Return type
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

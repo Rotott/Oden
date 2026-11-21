@@ -9,9 +9,10 @@ from src.journal.domain.utils import utc_now
 class Recording:
     """Represents an original audio recording."""
 
-    id: UUID = field(default_factory=uuid4)
     storage_key: str  # TODO placeholder attribute -> TBD
     duration_seconds: float  # TODO placeholder attribute -> TBD
     sample_rate: int  # TODO placeholder attribute -> TBD
     audio_format: str  # TODO placeholder attribute -> TBD
+
+    id: UUID = field(default_factory=uuid4)
     created_at: datetime = field(default_factory=utc_now)

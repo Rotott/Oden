@@ -1,10 +1,9 @@
-from datetime import UTC, datetime
+from datetime import datetime
 from unittest.mock import Mock
 from uuid import UUID, uuid4
 
-from src.journal.domain.journal_entry import JournalEntry
 from src.journal.domain.contribution import VoiceContribution
-
+from src.journal.domain.journal_entry import JournalEntry
 
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 # Initialization and default values
@@ -86,7 +85,7 @@ def test_add_voice_contribution_increases_collection_count(
     journal_entry,
     sample_voice_contribution,
 ):
-    pre = journal_entry.voice_contributions.size()
+    pre = len(journal_entry.voice_contributions)
 
     journal_entry.add_voice_contribution(sample_voice_contribution)
 

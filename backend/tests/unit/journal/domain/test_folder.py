@@ -4,7 +4,6 @@ from uuid import UUID, uuid4
 from src.journal.domain.folder import Folder
 from src.journal.domain.journal_entry import JournalEntry
 
-
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 # Initialization and default values
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

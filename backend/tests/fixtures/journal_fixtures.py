@@ -1,8 +1,9 @@
-import pytest
 from unittest.mock import Mock
 
-from src.journal.domain.journal import Journal
+import pytest
+
 from src.journal.domain.folder import Folder
+from src.journal.domain.journal import Journal
 from src.journal.domain.journal_entry import JournalEntry
 
 

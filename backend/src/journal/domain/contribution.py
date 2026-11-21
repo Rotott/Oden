@@ -11,7 +11,8 @@ from src.journal.domain.utils import utc_now
 class VoiceContribution:
     """Represents one voice contribution to a journal entry."""
 
-    id: UUID = field(default_factory=uuid4)
     recording: Recording
     transcription: Transcription | None = None
+
+    id: UUID = field(default_factory=uuid4)
     created_at: datetime = field(default_factory=utc_now)

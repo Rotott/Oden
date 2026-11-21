@@ -1,8 +1,9 @@
-import pytest
 from unittest.mock import Mock
 
-from src.journal.domain.journal_entry import JournalEntry
+import pytest
+
 from src.journal.domain.contribution import VoiceContribution
+from src.journal.domain.journal_entry import JournalEntry
 
 
 @pytest.fixture

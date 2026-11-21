@@ -1,8 +1,7 @@
-from datetime import UTC, datetime
+from datetime import datetime
 from uuid import UUID
 
 from src.journal.domain.recording import Recording
-
 
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 # Initialization and required attributes
